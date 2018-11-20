@@ -18,31 +18,57 @@
                 width: 80%;
                 height: 95%;
             }
+
+            table#realTable tr:nth-child(even) {
+                background-color: azure;
+            }
+            table#realTable tr:nth-child(odd) {
+                background-color: beige;
+            }
+            table#realTable th {
+                color: black;
+                background-color: coral;
+            }
+            table#realTable td{
+                font-family: FontAwesome;
+                font-size: large;
+                padding-left: 3px;
+            }
         </style>
+
+
     </head>
     <body>
         <table>
             <tr>
                 <td>
                     <div>
-                        <label>Enter code here</label>
+                        <label id="title">Enter code here and view its elements</label>
                     </div>
                 </td>
                 <td>
                     <div>
-                        <label>Parsed code here</label>
+                        <!--<label>Code data here</label>-->
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
                     <div class="textAreaWrapper">
-                        <textarea id="codePlaceholder" title="Enter code here"></textarea>
+                        <textarea id="codePlaceholder"></textarea>
                     </div>
                 </td>
                 <td>
                     <div class="textAreaWrapper">
-                        <textarea id="parsedCode" title="Parse code"></textarea>
+                        <table id = "realTable" hidden>
+                            <tr>
+                                <th>Line</th>
+                                <th>Type</th>
+                                <th>Name</th>
+                                <th>Condition</th>
+                                <th>Value</th>
+                            </tr>
+                        </table>
                     </div>
                 </td>
             </tr>
